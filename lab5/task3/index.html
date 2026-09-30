@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Базовый счётчик</title>
+</head>
+<body>
+  <h1>Счётчик</h1>
+
+  <p>Текущее значение: <span id="counter">0</span></p>
+
+  <button id="minus">-</button>
+  <button id="plus">+</button>
+  <button id="reset">Сброс</button>
+
+  <script>
+    let count = 0;
+
+    const counter = document.getElementById('counter');
+
+    document.getElementById('plus').addEventListener('click', () => {
+      count++;
+      counter.textContent = count;
+    });
+
+    document.getElementById('minus').addEventListener('click', () => {
+      count--;
+      counter.textContent = count;
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      count = 0;
+      counter.textContent = count;
+    });
+  </script>
+</body>
+</html>
